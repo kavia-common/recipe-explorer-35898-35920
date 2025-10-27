@@ -1,0 +1,46 @@
+:root {
+  /* Ocean Professional theme tokens */
+  --primary: #2563EB;
+  --secondary: #F59E0B;
+  --success: #F59E0B;
+  --error: #EF4444;
+
+  --bg: #f9fafb;       /* background */
+  --surface: #ffffff;  /* surface card/list */
+  --text: #111827;
+  --text-muted: #6b7280;
+
+  --border: rgba(17, 24, 39, 0.08);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card: 0 8px 30px rgba(0,0,0,0.06);
+  --shadow-btn: 0 6px 20px rgba(37, 99, 235, 0.25);
+
+  /* Ghost background for active navigation */
+  --primary-ghost: color-mix(in oklab, var(--primary) 10%, white);
+}
+
+/* Optional dark mode scaffold (can be wired later) */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --surface: #0e1729;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: rgba(148,163,184,0.15);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+  --shadow-card: 0 10px 35px rgba(0,0,0,0.3);
+  --shadow-btn: 0 6px 20px rgba(37, 99, 235, 0.35);
+  --primary-ghost: color-mix(in oklab, var(--primary) 20%, #0b1220);
+}
+
+/* Base element defaults harmonized with theme */
+a { color: var(--primary); }
+hr { border: 0; border-top: 1px solid var(--border); }
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+::placeholder {
+  color: var(--text-muted);
+}
