@@ -1,0 +1,167 @@
+:root {
+  --primary: #2563EB;
+  --secondary: #F59E0B;
+  --error: #EF4444;
+  --text: #111827;
+  --surface: #ffffff;
+  --background: #f9fafb;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.08);
+  --shadow-card: 0 0 20px 0 #0000001a;
+}
+
+.screen.sign-in {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: var(--surface);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* Status bar */
+.status-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 44px;
+}
+.status-symbols {
+  position: absolute;
+  left: 293.5px;
+  top: 16.6px;
+  width: 68px;
+  height: 13px;
+}
+.battery { position: absolute; left: 39.5px; top: 0.56px; width: 24.5px; height: 11.5px; }
+.battery-fill { position: absolute; left: 1px; top: 1px; width: 20px; height: 9.5px; }
+.battery-border { position: absolute; left: 0px; top: 0px; width: 22px; height: 11.5px; }
+.battery-cap { position: absolute; left: 23px; top: 3.69px; width: 1.5px; height: 4px; background: #000; }
+.battery-inner { position: absolute; left: 2px; top: 1.92px; width: 18px; height: 7.6667px; background: #303030; border-radius: 1.6px; }
+.cellular { position: absolute; left: 0px; top: 0.4px; width: 17.1px; height: 10.7px; }
+.cellular .bar { position: absolute; background: #000; border-radius: 1.2px; width: 3px; }
+.cellular .b1 { left: 0px; top: 6.7px; height: 4px; }
+.cellular .b2 { left: 4.8px; top: 4.7px; height: 6px; }
+.cellular .b3 { left: 9.4px; top: 2.3px; height: 8.3px; }
+.cellular .b4 { left: 14.1px; top: 0px; height: 10.7px; }
+.wifi { position: absolute; left: 22.1px; top: 0px; width: 15.4px; height: 11.0572px; }
+.wifi .w1 { position: absolute; left: 0; top: 0; width: 15.4px; height: 4.7829px; background: #000; }
+.wifi .w2 { position: absolute; left: 2.6855px; top: 3.8257px; width: 10.0322px; height: 3.6643px; background: #000; }
+.wifi .w3 { position: absolute; left: 5.368px; top: 7.6546px; width: 4.665px; height: 3.4026px; background: #000; }
+.status-time { position: absolute; left: 0; top: 12px; width: 180px; height: 22px; }
+.status-time .time-text { position: absolute; left: 29.5px; top: 2px; width: 37px; height: 18px; font-size: 15px; font-weight: 500; letter-spacing: -0.165px; color: #303030; }
+
+/* Titles */
+.title-group { position: absolute; left: 30px; top: 94px; width: 315px; height: 75px; }
+.title-group .hello { position: absolute; left: 0; top: 0; width: 84px; height: 45px; font-size: 30px; font-weight: 600; line-height: 45px; margin: 0; }
+.title-group .welcome { position: absolute; left: 0; top: 45px; width: 200px; height: 30px; font-size: 20px; line-height: 30px; margin: 0; }
+
+/* Form */
+.form { position: relative; width: 100%; height: 100%; }
+.field { position: absolute; width: 315px; height: 81px; }
+.field.email { left: 30px; top: 226px; }
+.field.password { left: 30px; top: 337px; }
+.label { position: absolute; left: 0; top: 0; width: auto; height: 21px; font-size: 14px; line-height: 21px; color: #121212; }
+.input-shell { position: absolute; left: 0; top: 26px; width: 315px; height: 55px; border: 1.5px solid #d9d9d9; border-radius: 10px; background: transparent; }
+.input {
+  position: absolute;
+  left: 20px;
+  top: 45px;
+  width: 275px; /* 315 - 40 left/right paddings visual */
+  height: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+}
+.input::placeholder { color: #9ca3af; }
+.field:focus-within .input-shell {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* Forgot password */
+.forgot-password { position: absolute; left: 40px; top: 438px; width: 140px; height: 17px; }
+.forgot-password .link {
+  all: unset;
+  cursor: pointer;
+  color: var(--secondary);
+  font-size: 11px;
+  line-height: 16.5px;
+}
+
+/* CTA */
+.cta-button {
+  position: absolute;
+  left: 30px;
+  top: 480px;
+  width: 315px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: filter .15s ease, transform .05s ease;
+}
+.cta-button:focus { outline: 2px solid rgba(37,99,235,0.5); outline-offset: 2px; }
+.cta-button:active { transform: translateY(1px); }
+.cta-button .cta-icon { width: 20px; height: 20px; }
+
+/* Divider */
+.divider { position: absolute; left: 90px; top: 560px; width: 195px; height: 17px; }
+.divider .line { position: absolute; top: 9px; width: 50px; height: 1px; background: #d9d9d9; }
+.divider .line.left { left: 0; }
+.divider .line.right { left: 145px; }
+.divider .divider-text { position: absolute; left: 57px; top: 0; width: 81px; height: 17px; font-size: 11px; color: #d9d9d9; text-align: center; }
+
+/* Socials */
+.socials { position: absolute; left: 0; top: 0; } /* anchor not used; children absolutely placed */
+.social {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 131px; /* default for google; override for facebook */
+  top: 597px;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.social.facebook { left: 200px; }
+.social.google .rect { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 10px; }
+.social.google .g-yellow { position: absolute; left: 12px; top: 12px; width: 20px; height: 20px; }
+.social.google .g-red { position: absolute; left: 14.153px; top: 12px; width: 15.656px; height: 7.755px; background: #ff3d00; }
+.social.google .g-green { position: absolute; left: 14.097px; top: 24.027px; width: 15.607px; height: 7.973px; background: #4caf50; }
+.social.google .g-blue { position: absolute; left: 22px; top: 20px; width: 10px; height: 9.4141px; }
+.social.facebook .fb-icon { position: absolute; left: 12px; top: 12px; width: 20px; height: 20px; }
+
+/* Helper text */
+.helper-text { position: absolute; left: 99px; top: 696px; width: 177px; height: 17px; font-size: 11px; }
+.helper-text .signup-link {
+  all: unset;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+}
+.helper-text .signup-link:focus { outline: 2px solid rgba(37,99,235,0.5); outline-offset: 2px; }
+
+/* Home indicator */
+.home-indicator { position: absolute; left: 0; top: 778px; width: 375px; height: 34px; }
+.home-indicator .home-bar { position: absolute; left: 120px; top: 21px; width: 135px; height: 5px; background: #121212; border-radius: 100px; }
+
+/* Image rendering improvement for small icons */
+img { image-rendering: -webkit-optimize-contrast; }

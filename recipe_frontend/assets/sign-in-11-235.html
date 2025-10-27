@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - 11-235</title>
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./sign-in-11-235.css">
+</head>
+<body>
+  <!-- Screen container derived from root frame (375x812) -->
+  <div id="screen-11-235" class="screen sign-in" role="main" aria-label="Sign In Screen">
+    <!-- Status Bar -->
+    <div class="status-bar" aria-hidden="true">
+      <!-- Right symbols -->
+      <div class="status-symbols">
+        <div class="battery" role="img" aria-label="Battery">
+          <img alt="" src="figmaimages/figma_image_13_71_128_306.svg" class="battery-fill">
+          <img alt="" src="figmaimages/figma_image_13_71_128_307.svg" class="battery-border">
+          <div class="battery-cap"></div>
+          <div class="battery-inner"></div>
+        </div>
+        <div class="cellular" role="img" aria-label="Cellular signal">
+          <div class="bar b1"></div>
+          <div class="bar b2"></div>
+          <div class="bar b3"></div>
+          <div class="bar b4"></div>
+        </div>
+        <div class="wifi" role="img" aria-label="Wi-Fi signal">
+          <div class="w1"></div>
+          <div class="w2"></div>
+          <div class="w3"></div>
+        </div>
+      </div>
+      <!-- Time -->
+      <div class="status-time" aria-hidden="true">
+        <span class="time-text">19:27</span>
+      </div>
+    </div>
+
+    <!-- Header / Title group -->
+    <header class="title-group">
+      <h1 class="hello typo-60">Hello,</h1>
+      <p class="welcome typo-61">Welcome Back!</p>
+    </header>
+
+    <!-- Form -->
+    <form class="form" id="sign-in-form" aria-label="Sign in form" novalidate>
+      <!-- Email -->
+      <div class="field email">
+        <label for="email" class="label typo-66">Email</label>
+        <div class="input-shell" aria-hidden="true"></div>
+        <input id="email" name="email" type="email" aria-label="Email" placeholder="Enter Email" class="input" autocomplete="email" />
+      </div>
+
+      <!-- Password -->
+      <div class="field password">
+        <label for="password" class="label typo-66">Enter Password</label>
+        <div class="input-shell" aria-hidden="true"></div>
+        <input id="password" name="password" type="password" aria-label="Password" placeholder="Enter Password" class="input" autocomplete="current-password" />
+      </div>
+
+      <!-- Forgot Password -->
+      <div class="forgot-password">
+        <button type="button" class="link" aria-label="Forgot Password">Forgot Password?</button>
+      </div>
+
+      <!-- CTA -->
+      <button type="submit" class="cta-button">
+        <span class="cta-text typo-58">Sign In</span>
+        <img alt="" src="figmaimages/figma_image_54_668_53_625.svg" class="cta-icon" aria-hidden="true">
+      </button>
+    </form>
+
+    <!-- Divider -->
+    <div class="divider" aria-hidden="true">
+      <div class="line left"></div>
+      <span class="divider-text typo-64">Or Sign in With</span>
+      <div class="line right"></div>
+    </div>
+
+    <!-- Social buttons -->
+    <div class="socials" role="group" aria-label="Social sign-in">
+      <!-- Google -->
+      <button type="button" class="social google" aria-label="Sign in with Google">
+        <img alt="" src="figmaimages/figma_image_13_36.svg" class="rect" aria-hidden="true">
+        <img alt="" src="figmaimages/figma_image_13_39.svg" class="g-yellow" aria-hidden="true">
+        <div class="g-red" aria-hidden="true"></div>
+        <div class="g-green" aria-hidden="true"></div>
+        <img alt="" src="figmaimages/figma_image_13_42.svg" class="g-blue" aria-hidden="true">
+      </button>
+
+      <!-- Facebook -->
+      <button type="button" class="social facebook" aria-label="Sign in with Facebook">
+        <img alt="" src="figmaimages/figma_image_13_58.svg" class="fb-icon" aria-hidden="true">
+      </button>
+    </div>
+
+    <!-- Supportive text -->
+    <div class="helper-text" role="note" aria-label="Sign up helper text">
+      <span class="typo-63">Don’t have an account? </span>
+      <button type="button" class="signup-link">Sign up</button>
+    </div>
+
+    <!-- Home indicator -->
+    <div class="home-indicator" aria-hidden="true">
+      <div class="home-bar"></div>
+    </div>
+  </div>
+
+  <script src="./sign-in-11-235.js"></script>
+</body>
+</html>
